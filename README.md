@@ -4,8 +4,8 @@ was taken from online course (JavaScript Algorithms
 and Data Structures Masterclass) by [Colt Steele](https://www.udemy.com/user/coltsteele/). 
 
 I started this repository to help me, personally, to improve the solving problem skills. I wanted to learn how to 
-analyze my code’s time and space complexity using Big O notation.  I learned the ins and outs of Recursion.  
-It helped me developing an approach to solving any difficult coding problem. I got to learn about the programming patterns. 
+analyze my code’s time and space complexity using Big O notation. I learned the ins and outs of Recursion.
+It helped me develop an approach to solving any difficult coding problem. I got to learn about the programming patterns. 
 Learn about searching algorithms. Learn the different sorting algorithms: Bubble, Selection, Insertion, Quick, Merge, 
 and Radix Sort.  
  
