@@ -63,11 +63,11 @@ const same = (arr1, arr2) => {
         freqCounter2[key] = ++freqCounter2[key] || 1 ;
         console.log('key', key, 'value', freqCounter2[key]);
     }
-    for ( let key in freqCounter1) {
-        if ( !( key ** 2 in freqCounter2 ) ) {
+    for ( let val in freqCounter1) {
+        if ( !( val ** 2 in freqCounter2 ) ) {
             return false;
         }
-        if (freqCounter2[ key ** 2 ] !== freqCounter1[ key ]) {
+        if (freqCounter2[ val ** 2 ] !== freqCounter1[val]) {
             return false;
         }
     }
@@ -86,7 +86,6 @@ const validAnagram = ( first , second ) => {
         let letter = key.toLowerCase();
         comparision[letter] = ++comparision[letter] || 1 ;
     }
-    console.log(comparision)
     for ( let i = 0 ; i < second.length ; i++) {
 
         if ( !comparision[second[i]] ) {
@@ -109,15 +108,30 @@ const sumOfZero = arr => {
     while (leftIndex < rightIndex) {
         let sum = arr[leftIndex] + arr[rightIndex];
         if ( sum === 0 ) {
-            return arr[leftIndex], arr[rightIndex]
+            return arr[leftIndex], arr[rightIndex];
         } else if ( sum > 0 ) {
-            console.log('--Hello');
             leftIndex--;
         } else {
-            console.log("++Hello");
             rightIndex++;
         }
     }
 };
 
 sumOfZero([-10, -2, 0, 2, 4, 9, 10, 12]);
+
+
+// Challenge 4
+
+const countUniqueValue = arr => {
+    if ( arr.length === 0 ) return 0;
+    let i = 0;
+    for ( let j = 0 ; j < arr.length ; j++) {
+        if ( arr[i] !== arr[j] ) {
+            i++;
+            arr[i] = arr[j];
+        }
+    }
+    return i + 1 ;
+};
+
+countUniqueValue([1,2,2,3,4,5,6]);
